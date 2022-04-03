@@ -97,6 +97,9 @@ $("#pdf-form").submit(function (event) {
                 $('#error-message').html(jqXHR.responseJSON.message);
                 $('#json-output').html(JSON.stringify(jqXHR.responseJSON, null, 4));
                 $('#raw-output-container').css("display", "block");
+            } else if (jqXHR.status == 413) {
+                // If file size is larger than limit, communicate that as error message
+                $('#error-message').html("Your file was too large to process. Please upload a file with size less than 1MB");
             } else {
                 // Else, write a generic error message and show it
                 $('#error-message').html("An error occured! Please try again later");
