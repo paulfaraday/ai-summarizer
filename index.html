@@ -11,6 +11,8 @@
 
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link href="assets/styles.css" rel="stylesheet">
+
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </head>
 
 <body>
@@ -29,6 +31,7 @@
         <h3>Please upload your text in the box below</h3>
         <textarea rows="10" cols="50" id="input_text"></textarea>
         <form id="text-form">
+            <div class="h-captcha" id="text-captcha" data-sitekey="25265df8-7233-4187-b0d9-d21ca38def04"></div>
             <input type="submit" value="Upload">
         </form>
     </div>
@@ -37,6 +40,7 @@
         <h3>Please upload your PDF below (size limit - 1 MB)</h3>
         <form id="pdf-form">
             <input type="file" name="input_file">
+            <div class="h-captcha" id="pdf-captcha" data-sitekey="25265df8-7233-4187-b0d9-d21ca38def04"></div>
             <input type="submit" value="Upload">
         </form>
     </div>

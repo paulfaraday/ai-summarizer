@@ -26,7 +26,8 @@ $("#text-form").submit(function (event) {
         url: 'https://ai-summarizer.herokuapp.com/summary',
         type: 'POST',
         data: {
-            input: $('#input_text').val()
+            input: $('#input_text').val(),
+            hcaptcha_response: $('#text-captcha').children('textarea[name="h-captcha-response"]').val()
         },
         success: function (data, textStatus, jqXHR) {
             // Hide loading spinner
