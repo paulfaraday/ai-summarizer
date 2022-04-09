@@ -1,3 +1,7 @@
+$(document).ready(
+    $.get('https://ai-summarizer.herokuapp.com')
+)
+
 function openTab(event, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
